@@ -1,0 +1,39 @@
+{% extends 'GYM/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="fh5co-loader"></div>
+
+    <div id="page">
+        <nav class="fh5co-nav" role="navigation">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+
+                            <p class="num">رشت ، گلسار ، نبش خیابان 109</p>
+                            <ul class="fh5co-social">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <div id="fh5co-logo"><a href="index.html">fitness<span>plus</span></a></div>
+                        </div>
+                        <div class="col-xs-10 text-right menu-1">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <h1 style="text-align: center; color: red">پرداخت موفق نبوده است. اگر پول کم شده است ظرف مدت ۴۸ ساعت پول به حساب شما بازخواهد گشت</h1>
+    <h1 style="text-align: center; color: red"><a class="btn btn-danger text-center" href="{% url 'gym:home' %}"> برای بازگشت رو این لینک بزنید</a></h1>
+{% endblock %}

@@ -1,0 +1,431 @@
+{% extends 'GYM/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="fh5co-loader"></div>
+
+    <div id="page">
+        <nav class="fh5co-nav" role="navigation">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-right">
+
+                            <p class="num">رشت ، گلسار ، نبش خیابان 109</p>
+                            <ul class="fh5co-social">
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <div id="fh5co-logo"><a href="index.html">fitness<span>plus</span></a></div>
+                        </div>
+                        <div class="col-xs-10 text-right menu-1">
+                            <ul>
+                                {% if user.is_authenticated %}
+                                    <li class="active"><a href="{% url 'gym:home' %}">صفحه اصلی</a></li>
+                                    <li><a href="#fh5co-gallery">گالری</a></li>
+                                    <li><a href="#trainer">مربیان</a></li>
+                                {% else %}
+                                    <li><a href="{% url 'gym:register' %}">ثت نام آنلاین</a></li>
+                                    <li><a href="{% url 'gym:login' %}">ورود</a></li>
+                                {% endif %}
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <header id="fh5co-header" class="fh5co-cover" role="banner"
+                style="background-image:url({% static 'images/main-page-bg3.jpg' %});"
+                data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>باشگاه بدنسازی فیتنس پلاس</h1>
+                                <h3>باشگاه بدنسازی فیتنس پلاس رشت</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="fh5co-services" class="fh5co-bg-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span><img class="img-responsive" src="{% static 'images/dambel.png' %}" alt=""></span>
+                            <h3>بروزترین تجهیزات</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span><img class="img-responsive" src="{% static 'images/excer.png' %}" alt=""></span>
+                            <h3>مربیان باتجربه</h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center animate-box">
+                        <div class="services">
+                            <span><img class="img-responsive" src="{% static 'images/buffet.png' %}" alt=""></span>
+                            <h3>مجهز به بوفه </h3>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
+                                است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط
+                                فعلی تکنولوژی</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-trainer">
+            <div class="container" id="trainer">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>مربیان باشگاه</h2>
+                        <p>مربیان با تجربه فیتنس پلاس</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 animate-box">
+                        <div class="trainer">
+                            <a href="#"><img class="img-responsive" src="{% static 'images/aref-akhlaghy.jpg' %}"
+                                             alt="trainer"></a>
+                            <div class="title">
+                                <h3><a href="#">عارف اخلاقی</a></h3>
+                                <span>مربی بدنسازی</span>
+                            </div>
+                            <div class="desc text-center">
+                                <ul class="fh5co-social-icons">
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 animate-box ">
+                        <div class="trainer mohamad">
+                            <a href="#"><img class="img-responsive" src="{% static 'images/mohammad-shokrieh.jpg' %}"
+                                             alt="trainer"></a>
+                            <div class="title">
+                                <h3><a href="#" style="color: white;">محمد شکریه</a></h3>
+                                <span style="color: white;">مربی بدنسازی </span>
+                            </div>
+                            <div class="desc text-center">
+                                <ul class="fh5co-social-icons">
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 animate-box">
+                        <div class="trainer">
+                            <a href="#"><img class="img-responsive" src="{% static 'images/reza-raoufy.jpg' %}"
+                                             alt="trainer"></a>
+                            <div class="title">
+                                <h3><a href="#">رضا رئوفی</a></h3>
+                                <span> TRX</span>
+                            </div>
+                            <div class="desc text-center">
+                                <ul class="fh5co-social-icons">
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-4 animate-box mt-3">
+                        <div class="trainer" style="margin-top: 8px;">
+                            <a href="#"><img class="img-responsive" src="{% static 'images/armin-yeganeh.jpg' %}"
+                                             alt="trainer"></a>
+                            <div class="title">
+                                <h3><a href="#">آرمین یگانه</a></h3>
+                                <span>مربی کیک بوکسینگ</span>
+                            </div>
+                            <div class="desc text-center">
+                                <ul class="fh5co-social-icons">
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 animate-box mt-3">
+                        <div class="trainer" style="margin-top: 8px;">
+                            <a href="#"><img class="img-responsive" src="{% static 'images/kaveh-firoozi.jpg' %}"
+                                             alt="trainer"></a>
+                            <div class="title">
+                                <h3><a href="#">کاوه فیروزی</a></h3>
+                                <span>مربی بدنسازی</span>
+                            </div>
+                            <div class="desc text-center">
+                                <ul class="fh5co-social-icons">
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <section class="gym-timing">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 text-center animate-box">
+                        <div class="card">
+                            <span><img class="img-responsive" src="{% static 'images/men-timer.png' %}" alt=""></span>
+                            <h1 class="men">سانس آقایان</h1>
+                            <p>همه روزه از 13:00 تا 23:00</p>
+                            <p>جمعه ها از 10:00 تا 17:00</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 text-center animate-box">
+                        <div class="card">
+                            <span><img class="img-responsive" src="{% static 'images/women-timer.png' %}" alt=""></span>
+                            <h1 class="women">سانس بانوان</h1>
+                            <p>از 6:30 تا 13:00</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div id="fh5co-pricing">
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>شهریه باشگاه</h2>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون ولوژی</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="pricing">
+                        {% for object in object_list %}
+                            <div class="col-md-3 animate-box">
+                                <div class="price-box">
+                                    <h2 class="pricing-plan">{{ object.session }}</h2>
+                                    <div class="price"><sup class="currency"></sup>{{ object.tiotion }}<small>ماهیانه</small>
+                                    </div>
+
+                                    <a href="{% url 'pay:gateway' object.pk %}" class="btn btn-select-plan btn-sm">انتخاب پلان</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+
+
+
+
+                        <div class="col-md-3 animate-box">
+                            <div class="price-box popular">
+                                <h2 class="pricing-plan">20 جلسه ای</h2>
+                                <h1>VIP فول</h1>
+                                <div class="price"><sup class="currency">میلیون تومان</sup>2,700</div>
+                                <ul class="classes">
+                                    <li>مربی همراه</li>
+                                    <li class="color">برنامه غذایی</li>
+                                    <li>برنامه تمرینی</li>
+                                </ul>
+                                <a href="#" class="btn btn-select-plan btn-sm">انتخاب پلان</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <h2>گالری تصاویر</h2>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
+                            provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-12">
+                        <ul id="fh5co-portfolio-list">
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-1.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+
+                                        <h2>تجهیزات مدرن</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-2.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+
+                                        <h2>بروزترین دستگاه های ورزشی</h2>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-3.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+
+                                        <h2>متن تست برای بعد</h2>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-4.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+
+                                        <h2>بخش TRX</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-5.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+
+                                        <h2>بوفه باشگاه</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="two-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-6.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+
+                                        <h2>بخش هوازی</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url({% static 'images/ga-7.jpg' %}); ">
+                                <a href="#">
+                                    <div class="case-studies-summary">
+                                        <!-- <span>test</span> -->
+                                        <h2>رختکن باشگاه</h2>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.655059625926!2d49.585112114656894!3d37.303308246918036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ff56315ebf3d071%3A0x40ce144a272f4e01!2sFitness%20Plus%20Gym!5e0!3m2!1sen!2snl!4v1631193491988!5m2!1sen!2snl"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+
+        <footer id="fh5co-footer" class="fh5co-bg" role="contentinfo">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row row-pb-md">
+
+
+                    <div class="col-md-12">
+
+                        <div class="col-md-4 fh5co-widget">
+                            <h3>باشگاه بدنسازی فیتنس پلاس</h3>
+                            <p>
+                                باشگاه بدنسازی فیتنس پلاس رشت با مربیان با تجربه و تجیزات مدرن
+                                باشگاه بدنسازی فیتنس پلاس رشت با مربیان با تجربه و تجیزات مدرن
+                                باشگاه بدنسازی فیتنس پلاس رشت با مربیان با تجربه و تجیزات مدرن
+
+                            </p>
+                            <p><a class="btn btn-primary" href="#">ثبت نام آنلاین</a></p>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <h3>لینک های مفید</h3>
+                            <ul class="fh5co-footer-links">
+                                <li><a href="#">مربیان</a></li>
+                                <li><a href="#">سانس باشگاه</a></li>
+                                <li><a href="#">لیست شهریه</a></li>
+                                <li><a href="#">گالری</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 footer-logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row copyright">
+                    <div class="col-md-12 text-center">
+                        <p>
+                            <small class="block">&copy;تمامی حقوق برای وبسایت فیتنس پلاس محفوظ میباشد</small>
+                            <small class="block">طراحی شده با <i class="fa fa-heart"></i> توسط تیم spiDev</small>
+                        </p>
+                        <p>
+                        <ul class="fh5co-social-icons">
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i></a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+    </div>
+{% endblock %}
