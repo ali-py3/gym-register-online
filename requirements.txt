@@ -4,7 +4,7 @@ az-iranian-bank-gateways==1.6.13
 cached-property==1.5.2
 certifi==2021.5.30
 charset-normalizer==2.0.6
-Django==3.2.7
+Django==3.2.12
 django-widget-tweaks==1.4.8
 idna==3.2
 isodate==0.6.0
